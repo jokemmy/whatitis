@@ -1,2 +1,2 @@
 # whatitis
-Whatitis is a type checker of vars.
+Whatitis is a type checker of var.
