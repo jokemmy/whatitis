@@ -1,21 +1,26 @@
 
-# whatitis
-Whatitis is a type checker.
+# Whatitis
+A type checker.
 
 ## Install
 ```js
 npm install whatitis -save
 ```
 
+## Test
+```js
+npm run test
+```
+
 ## Usage
 ```js
 imoprt itis from 'whatitis';
 
-itis.Undefiend( null ); // true
-itis.Undefiend( undefined ); // true
+itis.Undefined( null ); // true
+itis.Undefined( undefined ); // true
 itis.Defined( null ); // false
 itis.Defined( undefined ); // false
-itis.Element( docment ); // true
+itis.Element( document ); // true
 itis.Array( [] ); // true
 itis.Number( 1 ); // true
 itis.Function( function() {} ); // true
