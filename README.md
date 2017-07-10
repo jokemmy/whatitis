@@ -2,12 +2,12 @@
 # whatitis
 Whatitis is a type checker.
 
-# INSTALL
+## Install
 ```js
 npm install whatitis -save
 ```
 
-# USAGE
+## Usage
 ```js
 imoprt itis from 'whatitis';
 
@@ -39,5 +39,5 @@ itisEXample = itis.isItClass( EXample );
 itisEXample( new EXample()); // true
 ```
 
-## LICENSE
+## License
 MIT Licensed. Copyright (c) Syzmex 2017.
