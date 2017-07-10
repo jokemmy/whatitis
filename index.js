@@ -10,21 +10,15 @@ const isUndefined = v => v === null || v === undefined;
 // https://github.com/jonschlinkert/kind-of
 export { kindOf };
 
-export function property( key ) {
-  return function ( obj ) {
-    return isUndefined( obj ) ? undefined : obj[key];
-  };
-}
-
-export function instanceOf( Cls ) {
-  return function ( obj ) {
+export function itIsClass( Cls ) {
+  return function( obj ) {
     return ( obj instanceof Cls );
   };
 }
 
 // Number, Function, RegExp, Boolean, Date, Error, Arguments,
 // PlainObject, Object, Array, ArrayLike, Element
-const is = {
+const itis = {
   Undefined: isUndefined,
   Defined: isDefined,
   Element: v => !!( v && v.nodeType === 1 ),
@@ -35,14 +29,17 @@ const is = {
 
 [ 'Array', 'Number', 'Function', 'RegExp', 'Boolean', 'Date', 'Error',
   'Arguments', 'Null', 'String' ].forEach( name => {
-    is[name] = v => kindOf( v ) === name.toLowerCase();
+    itis[name] = v => kindOf( v ) === name.toLowerCase();
   });
 
 
-const getLength = property( 'length' );
-is.ArrayLike = function ( collection ) {
-  const length = getLength( collection );
-  return is.Number( length ) && length >= 0 && length <= MAX_ARRAY_INDEX;
+const getLength = function( obj ) {
+  return itis.Object( obj ) ? obj.length : undefined;
 };
 
-export default is;
+itis.ArrayLike = function( collection ) {
+  const length = getLength( collection );
+  return itis.Number( length ) && length >= 0 && length <= MAX_ARRAY_INDEX;
+};
+
+export default itis;
