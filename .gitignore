@@ -1,5 +1,9 @@
-# Object file
-*.o
+.DS_Store
+npm-debug.log*
+/node_modules
+/lib
+/.nyc_output
+/test/**/dist
 
-# Ada Library Information
-*.ali
+# tnpm cache directory
+/test/**/.cache
