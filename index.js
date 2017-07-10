@@ -10,7 +10,7 @@ const isUndefined = v => v === null || v === undefined;
 // https://github.com/jonschlinkert/kind-of
 export { kindOf };
 
-export function itIsClass( Cls ) {
+function isItClass( Cls ) {
   return function( obj ) {
     return ( obj instanceof Cls );
   };
@@ -23,7 +23,8 @@ const itis = {
   Defined: isDefined,
   Element: v => !!( v && v.nodeType === 1 ),
   PlainObject: isPlainObject,
-  Object: isObject
+  Object: isObject,
+  isItClass
 };
 
 
