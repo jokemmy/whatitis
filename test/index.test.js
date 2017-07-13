@@ -32,7 +32,6 @@ test( 'itis.Number', () => {
   expect( itis.Number( 0.1 )).toBeTruthy();
   expect( itis.Number( NaN )).toBeTruthy();
   expect( itis.Number( Infinity )).toBeTruthy();
-  expect( itis.Number( '0.1' )).toBeFalsy();
 });
 
 test( 'itis.Function', () => {
