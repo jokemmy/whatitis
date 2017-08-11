@@ -3,23 +3,24 @@ import kindOf from 'kind-of';
 import isObject from 'isobject';
 import isPlainObject from 'is-plain-object';
 
+import isDefined from './isDefined';
+import isUndefined from './isUndefined';
+import isItClass from './isItClass';
+import isWindow from './isWindow';
+import isElement from './isElement';
+import isDocument from './isDocument';
+
 const MAX_ARRAY_INDEX = ( 2 ** 53 ) - 1;
-const isDefined = v => v !== null && v !== undefined;
-const isUndefined = v => v === null || v === undefined;
 
-
-function isItClass( Cls ) {
-  return function( obj ) {
-    return ( obj instanceof Cls );
-  };
-}
 
 // Number, Function, RegExp, Boolean, Date, Error, Arguments,
 // PlainObject, Object, Array, ArrayLike, Element
 const itis = {
   Undefined: isUndefined,
   Defined: isDefined,
-  Element: v => !!( v && v.nodeType === 1 ),
+  Element: isElement,
+  Window: isWindow,
+  Document: isDocument,
   PlainObject: isPlainObject,
   Object: isObject,
   isItClass,
