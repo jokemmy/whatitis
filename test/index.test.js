@@ -23,6 +23,16 @@ test( 'itis.Element', () => {
   expect( itis.Element( document.querySelector( 'p' ))).toBeTruthy();
 });
 
+test( 'itis.Window', () => {
+  const window = new JSDOM( '<!DOCTYPE html><p>Hello world</p>' ).window;
+  expect( itis.Window( window )).toBeTruthy();
+});
+
+test( 'itis.Document', () => {
+  const { document } = new JSDOM( '<!DOCTYPE html><p>Hello world</p>' ).window;
+  expect( itis.Document( document )).toBeTruthy();
+});
+
 test( 'itis.Array', () => {
   expect( itis.Array([])).toBeTruthy();
 });
