@@ -5,7 +5,7 @@ const itis = {};
 
 [ 'Array', 'Number', 'Function', 'RegExp', 'Boolean', 'Date', 'Error',
   'Arguments', 'Null', 'String' ].forEach( name => {
-    itis[name] = v => kindOf( v ) === name.toLowerCase();
-  });
+  itis[name] = v => kindOf( v ) === name.toLowerCase();
+});
 
 export default itis;

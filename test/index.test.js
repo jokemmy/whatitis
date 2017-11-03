@@ -24,7 +24,7 @@ test( 'itis.Element', () => {
 });
 
 test( 'itis.Window', () => {
-  const window = new JSDOM( '<!DOCTYPE html><p>Hello world</p>' ).window;
+  const { window } = new JSDOM( '<!DOCTYPE html><p>Hello world</p>' );
   expect( itis.Window( window )).toBeTruthy();
 });
 
