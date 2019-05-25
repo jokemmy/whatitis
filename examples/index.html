@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+    <title></title>
+    <script type="text/javascript" src="../whatitis.js"></script>
+    <style type="text/css">
+      .line {
+        width: 300px;
+        padding: 0 16px;
+        line-height: 24px;
+        font-size: 12px;
+        margin: 0 auto;
+      }
+      .line:nth-child(even) {
+        background-color: #e6f7ff;
+      }
+      .line > span {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <script type="text/javascript">
+      var itis = window.whatitis;
+      var dom = document.getElementById( 'div' );
+      function newLine( key, value ) {
+        var divDom = document.createElement( 'div' );
+        divDom.className = 'line';
+        divDom.innerHTML = '<pre>' + key + '</pre>' + '<span>' + String( value ) + '</span>';
+        dom.appendChild( divDom );
+      }
+      newLine( 'itis.Undefined( null )', itis.Undefined( null ));
+      newLine( 'itis.Undefined( undefined )', itis.Undefined( undefined ));
+      newLine( 'itis.Defined( null )', itis.Defined( null ));
+      newLine( 'itis.Defined( undefined )', itis.Defined( undefined ));
+      newLine( 'itis.Array([])', itis.Array([]));
+      newLine( 'itis.Number( 1 )', itis.Number( 1 ));
+      newLine( 'itis.Function( function() {})', itis.Function( function() {}));
+      newLine( 'itis.RegExp( /\\w/ )', itis.RegExp( /\w/ ));
+      newLine( 'itis.Boolean( true )', itis.Boolean( true ));
+      newLine( 'itis.Date( new Date())', itis.Date( new Date()));
+      newLine( 'itis.Error( new Error( \'error\' ))', itis.Error( new Error( 'error' )));
+      newLine( 'itis.Null( null )', itis.Null( null ));
+      newLine( 'itis.String( \'\' )', itis.String( '' ));
+      newLine( 'itis.ArrayLike({ length: 1 })', itis.ArrayLike({ length: 1 }));
+      newLine( 'itis.Element( dom )', itis.Element( dom ));
+      newLine(
+        '( function testArguments() {\n  return itis.Arguments( arguments );\n})();',
+        ( function testArguments() {
+          return itis.Arguments( arguments );
+        })()
+      );
+    </script>
+  </body>
+</html>

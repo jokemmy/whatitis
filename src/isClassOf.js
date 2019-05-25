@@ -1,5 +1,5 @@
 
-export default function isItClass( Cls ) {
+export default function isClassOf( Cls ) {
   return function( obj ) {
     return ( obj instanceof Cls );
   };

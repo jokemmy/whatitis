@@ -4,7 +4,7 @@ import isPlainObject from 'is-plain-object';
 import itis from './base';
 import isDefined from './isDefined';
 import isUndefined from './isUndefined';
-import isItClass from './isItClass';
+import isItClass from './isClassOf';
 import isWindow from './isWindow';
 import isElement from './isElement';
 import isDocument from './isDocument';

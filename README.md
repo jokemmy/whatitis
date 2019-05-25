@@ -40,7 +40,7 @@ testArguments(); // true
 
 // itIsClass
 class EXample {}
-itisEXample = itis.isItClass( EXample );
+itisEXample = itis.isClassOf( EXample );
 itisEXample( new EXample()); // true
 ```
 
