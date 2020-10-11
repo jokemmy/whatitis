@@ -9,6 +9,8 @@ import isWindow from './isWindow';
 import isElement from './isElement';
 import isDocument from './isDocument';
 import isArrayLike from './isArrayLike';
+import isOneOf from './isOneOf';
+import isOneOfType from './isOneOfType';
 
 
 // Number, Function, RegExp, Boolean, Date, Error, Arguments,
@@ -22,5 +24,7 @@ export default Object.assign( itis, {
   PlainObject: isPlainObject,
   Object: isObject,
   ArrayLike: isArrayLike,
-  isItClass
+  isItClass,
+  oneOfType: isOneOfType,
+  oneOf: isOneOf
 });
