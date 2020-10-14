@@ -88,8 +88,8 @@ test( 'itis.Arguments', () => {
   expect( itis.Arguments({ length: '0' })).toBeFalsy();
 });
 
-test( 'itis.isItClass', () => {
+test( 'itis.isClassOf', () => {
   class EXample {}
-  const itisEXample = itis.isItClass( EXample );
+  const itisEXample = itis.classOf( EXample );
   expect( itisEXample( new EXample())).toBeTruthy();
 });

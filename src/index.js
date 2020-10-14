@@ -4,7 +4,7 @@ import isPlainObject from 'is-plain-object';
 import itis from './base';
 import isDefined from './isDefined';
 import isUndefined from './isUndefined';
-import isItClass from './isClassOf';
+import isClassOf from './isClassOf';
 import isWindow from './isWindow';
 import isElement from './isElement';
 import isDocument from './isDocument';
@@ -24,7 +24,7 @@ export default Object.assign( itis, {
   PlainObject: isPlainObject,
   Object: isObject,
   ArrayLike: isArrayLike,
-  isItClass,
+  classOf: isClassOf,
   oneOfType: isOneOfType,
   oneOf: isOneOf
 });
