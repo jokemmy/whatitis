@@ -35,7 +35,7 @@
       "plugins": ["@babel/plugin-transform-runtime"]
     },
     "umd": {
-      "presets": [["@babel/preset-env", { "corejs": 2, "useBuiltIns": "usage" }]],
+      "presets": [["@babel/preset-env", { "corejs": 3, "useBuiltIns": "usage" }]],
     }
   }
 }

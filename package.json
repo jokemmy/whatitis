@@ -36,6 +36,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "core-js": "^3.6.4",
     "is-plain-object": "^2.0.4",
     "isobject": "^3.0.1",
     "kind-of": "^6.0.0"
