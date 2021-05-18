@@ -1,8 +1,6 @@
 {
   "presets": [
     ["@babel/preset-env", {
-      "corejs": 3,
-      "useBuiltIns": "usage",
       "targets": {
         "browsers": "> 0.25%, not op_mini all, not dead, IE 10-11",
         "node": 7
@@ -29,12 +27,15 @@
   ],
   "env": {
     "commonjs": {
+      "presets": [["@babel/preset-env", { "corejs": 3, "useBuiltIns": "usage", "modules": false }]],
       "plugins": [ "add-module-exports", "@babel/plugin-transform-runtime" ]
     },
     "es": {
-      "presets": [["@babel/preset-env", { "modules": false }]],
+      "presets": [["@babel/preset-env", { "corejs": 3, "useBuiltIns": "entry", "modules": false }]],
       "plugins": ["@babel/plugin-transform-runtime"]
     },
-    "umd": {}
+    "umd": {
+      "presets": [["@babel/preset-env", { "corejs": 2, "useBuiltIns": "usage", "modules": false }]],
+    }
   }
 }
