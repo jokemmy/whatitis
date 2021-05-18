@@ -27,7 +27,7 @@
   ],
   "env": {
     "commonjs": {
-      "presets": [["@babel/preset-env", { "corejs": 3, "useBuiltIns": "usage", "modules": false }]],
+      "presets": [["@babel/preset-env", { "corejs": 3, "useBuiltIns": "usage" }]],
       "plugins": [ "add-module-exports", "@babel/plugin-transform-runtime" ]
     },
     "es": {
@@ -35,7 +35,7 @@
       "plugins": ["@babel/plugin-transform-runtime"]
     },
     "umd": {
-      "presets": [["@babel/preset-env", { "corejs": 2, "useBuiltIns": "usage", "modules": false }]],
+      "presets": [["@babel/preset-env", { "corejs": 2, "useBuiltIns": "usage" }]],
     }
   }
 }
