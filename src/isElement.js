@@ -28,4 +28,4 @@
  *   None
  */
 
-export default element => typeof element === 'object' && element.nodeType === 1;
+export default element => typeof element === 'object' && element && element.nodeType === 1;
